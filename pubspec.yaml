@@ -1,0 +1,36 @@
+name: k_id_core
+description: The k-ID SDK for Flutter apps. An age gate with parental consent, adult age verification, and a settings menu where players manage their permissions.
+version: 1.0.0
+repository: https://github.com/kidentify/k-id-core-sdk-flutter
+homepage: https://github.com/kidentify/k-id-core-sdk-flutter
+
+environment:
+  sdk: ^3.5.0
+  flutter: '>=3.24.0'
+
+dependencies:
+  crypto: ^3.0.8
+  flutter:
+    sdk: flutter
+  flutter_web_plugins:
+    sdk: flutter
+  http: ^1.6.0
+  meta: ^1.15.0
+  web: ^1.1.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+
+flutter:
+  plugin:
+    platforms:
+      android:
+        package: com.kid.core.flutter
+        pluginClass: KidCorePlugin
+      ios:
+        pluginClass: KidCorePlugin
+      web:
+        pluginClass: KidCoreWebPlugin
+        fileName: src/platform/web_plugin.dart
